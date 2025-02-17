@@ -32,7 +32,6 @@ func LoadConfig() *Config {
 			SpotifyClientSecret: getEnv("SPOTIFY_CLIENT_SECRET", ""),
 			BaseURL:             getEnv("BASE_URL", "http://localhost:8080"),
 		}
-		println(cfg)
 		log.Println("Config loaded successfully")
 	})
 
