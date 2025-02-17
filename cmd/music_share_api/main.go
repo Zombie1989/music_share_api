@@ -1,20 +1,17 @@
 package main
 
 import (
-	"net/http"
-
+	"github.com/Zombie1989/music_share_api/routes"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	// Create a new Gin router
-	r := gin.Default()
+	// Initialize Gin
+	router := gin.Default()
 
-	// Define a simple route
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "hello world"})
-	})
+	// Set up all routes
+	routes.SetupRoutes(router)
 
 	// Start the Gin server
-	r.Run(":8080") // Default port is :8080
+	router.Run(":8080")
 }
