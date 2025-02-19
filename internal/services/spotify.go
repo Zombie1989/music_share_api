@@ -10,6 +10,7 @@ type UserData struct {
 	DisplayName string `json:"display_name"`
 	Email       string `json:"email"`
 	ID          string `json:"id"`
+	Country     string `json:"country"`
 }
 
 // GetCurrentUser fetches the current user details from Spotify API
